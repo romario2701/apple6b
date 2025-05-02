@@ -7,8 +7,8 @@
 </head>
 <body>
 
-<h1>Eliminar este sexo</h1>
-<form action="/sexo/public/sexo/delete" method="POST">
+<h1>Editar el Sexo</h1>
+<form action="/apple5a/public/sexo/delete" method="POST">
     <input type="hidden" name="idsexo" value="<?php echo htmlspecialchars($sexo['idsexo']); ?>">
     
     <label for="nombre">Nombre:</label>
@@ -17,7 +17,7 @@
     <input type="submit" value="Eliminar">
 </form>
 
-<a href="index.php">Volver al listado</a>
+<a href="index">Volver al listado</a>
 
 </body>
 </html>
