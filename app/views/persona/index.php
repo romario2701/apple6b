@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Listar Personas</title>
-    <link rel="stylesheet" href="/apple5a/public/css/style.css">
+    <link rel="stylesheet" href="/apple6b/public/css/style.css">
 </head>
 <body>
 
@@ -33,10 +33,10 @@
                         <td><?php echo htmlspecialchars($persona['apellidos']); ?></td>
                         <td><?php echo htmlspecialchars($persona['fechanacimiento']); ?></td>
                         <td><?php echo htmlspecialchars($persona['nombre_sexo']); ?></td> <td><?php echo htmlspecialchars($persona['nombre_estadocivil']); ?></td> <td>
-                            <a href="/apple5a/public/persona/editForm?id=<?php echo htmlspecialchars($persona['idpersona']); ?>">
+                            <a href="/apple6b/public/persona/editForm?id=<?php echo htmlspecialchars($persona['idpersona']); ?>">
                                 <button>Editar</button>
                             </a>
-                            <a href="/apple5a/public/persona/deleteForm?id=<?php echo htmlspecialchars($persona['idpersona']); ?>"
+                            <a href="/apple6b/public/persona/deleteForm?id=<?php echo htmlspecialchars($persona['idpersona']); ?>"
                                onclick="return confirm('¿Estás seguro de eliminar esta persona?');">
                                 <button>Eliminar</button>
                             </a>
@@ -52,6 +52,6 @@
     </table>
 </div>
 
-<script src="/apple5a/public/js/script.js"></script>
+<script src="/apple6b/public/js/script.js"></script>
 </body>
 </html>
