@@ -32,6 +32,14 @@ if (empty($route) || $route === '/') {
             $controller = new PersonaController();
             $controller->index();
             break;
+        case 'persona/create':
+            $controller = new PersonaController();
+            $controller->createForm();
+            break;
+
+
+
+
         case 'sexo':
         case 'sexo/index':
             $controller = new SexoController();
