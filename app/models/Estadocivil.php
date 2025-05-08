@@ -14,7 +14,6 @@ class EstadoCivil {
     }
 
 
-class EstadoCivil {
     public function getAll() {
         $db = Database::connect();
         $query = $db->query("SELECT idestadocivil, nombre FROM estadocivil");
