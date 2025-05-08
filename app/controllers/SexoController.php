@@ -137,16 +137,32 @@ public function update() {
 
 public function api() {
 
- header('Content-Type: application/json');
-        header("Access-Control-Allow-Origin: *"); // Permite llamadas desde Flutter
-        header("Access-Control-Allow-Methods: GET");
+// header('Content-Type: application/json');
+  //      header("Access-Control-Allow-Origin: *"); // Permite llamadas desde Flutter
+    //    header("Access-Control-Allow-Methods: GET");
         
 
 
-        $data = $this->sexo->read();
-           // $data = $this->SexoModel->get_all();
-            echo json_encode($data);
-        exit();
+      //  $data = $this->sexo->read();
+        //   // $data = $this->SexoModel->get_all();
+          //  echo json_encode($data);
+       // exit();
+ // Desactivar errores HTML
+        ini_set('display_errors', 0);
+        error_reporting(0);
+
+        // Limpiar buffer
+        while (ob_get_level()) {
+            ob_end_clean();
+        }
+
+        $sexos = $this->model->getAll();
+        header('Content-Type: application/json');
+        echo json_encode($sexos);
+        exit;
+
+
+
     }
 
 
