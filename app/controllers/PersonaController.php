@@ -30,7 +30,7 @@ class PersonaController {
         $sexos = $this->sexo->read();
             
         print_r($sexos);
-
+        die();
         $estadosciviles = $this->estadocivil->read();
 
         require_once '../app/views/persona/create.php';
