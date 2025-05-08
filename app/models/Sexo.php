@@ -28,8 +28,7 @@ class Sexo {
 
  public function getAll() {
         // Conexión a la base de datos
-        $db = Database::connect();
-        $query = $db->query("SELECT idsexo, nombre FROM sexo");
+        $query = $this->conn->query("SELECT idsexo, nombre FROM sexo");
         return $query->fetchAll(PDO::FETCH_ASSOC);
     }
 
