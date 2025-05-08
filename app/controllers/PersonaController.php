@@ -54,7 +54,7 @@ class PersonaController {
                 $this->persona->idestadocivil = $_POST['idestadocivil'];
 
                 if ($this->persona->create()) {
-                    header('Location: index.php?msg=created');
+                    header('Location: index?msg=created');
                     exit;
                 } else {
         $sexos = $this->sexo->read();
