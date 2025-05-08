@@ -10,7 +10,7 @@
 
 <div class="container">
     <h1>Listar Personas</h1>
-    <a href="/apple6b/app/views/persona/create.php"><button>Agregar</button></a>
+    <a href="/apple6b/public/persona/create"><button>Agregar</button></a>
 
     <table>
         <thead>
