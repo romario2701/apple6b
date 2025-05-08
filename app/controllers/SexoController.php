@@ -136,10 +136,17 @@ public function update() {
 
 
 public function api() {
-        header('Content-Type: application/json');
+
+ header('Content-Type: application/json');
+        header("Access-Control-Allow-Origin: *"); // Permite llamadas desde Flutter
+        header("Access-Control-Allow-Methods: GET");
+        
+
+
         $data = $this->sexo->read();
            // $data = $this->SexoModel->get_all();
             echo json_encode($data);
+        exit();
     }
 
 
