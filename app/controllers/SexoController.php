@@ -148,8 +148,8 @@ public function api() {
           //  echo json_encode($data);
        // exit();
  // Desactivar errores HTML
-        ini_set('display_errors', 0);
-        error_reporting(0);
+       // ini_set('display_errors', 0);
+       // error_reporting(0);
 
         // Limpiar buffer
         while (ob_get_level()) {
