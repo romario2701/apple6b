@@ -139,6 +139,7 @@ public function api() {
 
         $data = $this->sexo->read();
            // $data = $this->SexoModel->get_all();
+         header("Content-Type: application/json");
             echo json_encode($data);
     }
 
