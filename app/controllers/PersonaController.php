@@ -15,6 +15,8 @@ class PersonaController {
     public function __construct() {
         $this->db = (new Database())->getConnection();
         $this->persona = new Persona($this->db);
+        $this->sexo = new Sexo($this->db);
+        $this->estadocivil = new Estadocivil($this->db);
     }
 
     // Mostrar todas las personas
