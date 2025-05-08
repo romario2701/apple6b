@@ -6,7 +6,7 @@ error_reporting(E_ALL);
 require_once $_SERVER['DOCUMENT_ROOT'] . '/apple6b/config/database.php';
 require_once $_SERVER['DOCUMENT_ROOT'] . '/apple6b/app/models/Persona.php';
 require_once $_SERVER['DOCUMENT_ROOT'] . '/apple6b/app/models/Sexo.php';
-require_once $_SERVER['DOCUMENT_ROOT'] . '/apple6b/app/models/EstadoCivil.php';
+require_once $_SERVER['DOCUMENT_ROOT'] . '/apple6b/app/models/Estadocivil.php';
 
 class PersonaController {
     private $persona;
