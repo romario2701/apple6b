@@ -28,6 +28,8 @@ class PersonaController {
 
 
         $sexos = $this->sexo->read();
+            
+        print_r($sexos);
 
         $estadosciviles = $this->estadocivil->read();
 
