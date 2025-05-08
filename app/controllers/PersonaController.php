@@ -34,7 +34,6 @@ class PersonaController {
         $sexos = $this->sexo->read();
             
         $estadosciviles = $this->estadocivil->read();
-        die(" 1");
         require_once '../app/views/persona/create.php';
     }
 
