@@ -30,7 +30,7 @@ class PersonaController {
         $sexos = $this->sexo->read();
             
         $estadosciviles = $this->estadocivil->read();
-
+        die(" 1");
         require_once '../app/views/persona/create.php';
     }
 
@@ -58,6 +58,7 @@ class PersonaController {
             
        $estadosciviles = $this->estadocivil->read();
 
+        die(" 2");
 
                     $error = "Error al crear la persona.";
                     require_once '../app/views/persona/create.php'; // Puedes pasar el error a la vista
@@ -68,6 +69,7 @@ class PersonaController {
             
         $estadosciviles = $this->estadocivil->read();
 
+        die(" 3");
 
                 $error = "Faltan datos en el formulario.";
                 require_once '../app/views/persona/create.php'; // Puedes pasar el error a la vista
