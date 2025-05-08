@@ -133,6 +133,21 @@ public function update() {
     die();  // Detener la ejecución para ver los mensajes
 
 }
+
+
+public function api() {
+
+        $data = $this->sexo->read();
+           // $data = $this->SexoModel->get_all();
+            echo json_encode($data);
+    }
+
+
+
+
+
+
+
 }
 
 /// Manejo de la acción en la URL
@@ -150,6 +165,11 @@ if (isset($_GET['action'])) {
          case 'delete':
 
             $controller->delete();
+            break;
+
+         case 'api':
+
+            $controller->api();
             break;
 
 
