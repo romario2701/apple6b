@@ -5,6 +5,8 @@ error_reporting(E_ALL);
 
 require_once $_SERVER['DOCUMENT_ROOT'] . '/apple6b/config/database.php';
 require_once $_SERVER['DOCUMENT_ROOT'] . '/apple6b/app/models/Persona.php';
+require_once $_SERVER['DOCUMENT_ROOT'] . '/apple6b/app/models/Sexo.php';
+require_once $_SERVER['DOCUMENT_ROOT'] . '/apple6b/app/models/EstadoCivil.php';
 
 class PersonaController {
     private $persona;
@@ -23,6 +25,11 @@ class PersonaController {
 
     // Mostrar el formulario de creación de persona
     public function createForm() {
+         $sexoModel = new Sexo();
+    $estadoCivilModel = new EstadoCivil();
+
+    $sexos = $sexoModel->getAll();
+    $estadosCiviles = $estadoCivilModel->getAll();
         require_once '../app/views/persona/create.php';
     }
 

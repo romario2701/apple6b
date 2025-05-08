@@ -13,6 +13,15 @@ class EstadoCivil {
         $this->conn = $db;
     }
 
+
+class EstadoCivil {
+    public function getAll() {
+        $db = Database::connect();
+        $query = $db->query("SELECT idestadocivil, nombre FROM estadocivil");
+        return $query->fetchAll(PDO::FETCH_ASSOC);
+    }
+}
+
     // Crear un nuevo estado civil
     public function create() {
         try {
