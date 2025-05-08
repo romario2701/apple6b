@@ -19,7 +19,6 @@ class EstadoCivil {
         $query = $db->query("SELECT idestadocivil, nombre FROM estadocivil");
         return $query->fetchAll(PDO::FETCH_ASSOC);
     }
-}
 
     // Crear un nuevo estado civil
     public function create() {
