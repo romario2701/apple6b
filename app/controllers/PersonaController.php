@@ -26,13 +26,11 @@ class PersonaController {
     // Mostrar el formulario de creación de persona
     public function createForm() {
 
-$sexoModel = new Sexo($this->db);
-$estadoCivilModel = new Estadocivil($this->db);
 
+        $sexos = $this->sexo->read();
 
+        $estadosciviles = $this->estadocivil->read();
 
-    $sexos = $sexoModel->getAll();
-    $estadosCiviles = $estadoCivilModel->getAll();
         require_once '../app/views/persona/create.php';
     }
 

@@ -101,9 +101,9 @@
                 <label for="idestadocivil">Estado Civil:</label>
                 <select name="idestadocivil" id="idestadocivil" required>
                     <?php
-                    if (isset($estadosCiviles) && !empty($estadosCiviles)):
-                        foreach ($estadosCiviles as $estadoCivil):
-                            echo '<option value="' . $estadoCivil['idestadocivil'] . '">' . htmlspecialchars($estadoCivil['nombre']) . '</option>';
+                    if (isset($estadosciviles) && !empty($estadosciviles)):
+                        foreach ($estadosciviles as $estadocivil):
+                            echo '<option value="' . $estadoCivil['idestadocivil'] . '">' . htmlspecialchars($estadocivil['nombre']) . '</option>';
                         endforeach;
                     else:
                         echo '<option value="">No hay estados civiles disponibles</option>';
