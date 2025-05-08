@@ -20,6 +20,8 @@ class PersonaController {
     // Mostrar todas las personas
     public function index() {
         $personas = $this->persona->read();
+        $sexos = $this->sexo->read();
+        $estadosciviles = $this->estadocivil->read();
         require_once '../app/views/persona/index.php';
     }
 
@@ -66,7 +68,6 @@ class PersonaController {
                 }
             } else {
         $sexos = $this->sexo->read();
-            
         $estadosciviles = $this->estadocivil->read();
 
         die(" 3");
