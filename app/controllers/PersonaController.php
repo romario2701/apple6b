@@ -56,7 +56,7 @@ class PersonaController {
                 } else {
         $sexos = $this->sexo->read();
             
-        $estadosciviles = $this->estadocivil->read();
+       $estadosciviles = $this->estadocivil->read();
 
 
                     $error = "Error al crear la persona.";
