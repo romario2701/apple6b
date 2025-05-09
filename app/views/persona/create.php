@@ -103,7 +103,7 @@
                     <?php
                     if (isset($estadosciviles) && !empty($estadosciviles)):
                         foreach ($estadosciviles as $estadocivil):
-                            echo '<option value="' . $estadoCivil['idestadocivil'] . '">' . htmlspecialchars($estadocivil['nombre']) . '</option>';
+                            echo '<option value="' . $estadocivil['idestadocivil'] . '">' . htmlspecialchars($estadocivil['nombre']) . '</option>';
                         endforeach;
                     else:
                         echo '<option value="">No hay estados civiles disponibles</option>';
