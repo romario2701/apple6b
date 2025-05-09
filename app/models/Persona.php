@@ -36,7 +36,7 @@ class Persona {
             echo "grabo";
             die();
         } catch (PDOException $e) {
-            echo "no grabo";
+            echo "no grabo:  ".$this->idestadocivil;
             echo $e->getMessage();
             error_log("Error en create() para persona: " . $e->getMessage());
             die();
