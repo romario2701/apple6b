@@ -37,6 +37,7 @@ class Persona {
             die();
         } catch (PDOException $e) {
             echo "no grabo";
+            echo $e->getMessage();
             error_log("Error en create() para persona: " . $e->getMessage());
             die();
             return false;
