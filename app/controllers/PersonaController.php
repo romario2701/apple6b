@@ -39,14 +39,14 @@ class PersonaController {
 
     // Procesar la creación de una nueva persona
     public function create() {
-        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-            if (
-                isset($_POST['nombres']) &&
-                isset($_POST['apellidos']) &&
-                isset($_POST['fechanacimiento']) &&
-                isset($_POST['idsexo']) &&
-                isset($_POST['idestadocivil'])
-            ) {
+    //    if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+      //      if (
+        //        isset($_POST['nombres']) &&
+          //      isset($_POST['apellidos']) &&
+         //       isset($_POST['fechanacimiento']) &&
+         //       isset($_POST['idsexo']) &&
+         //       isset($_POST['idestadocivil'])
+         //   ) {
                 $this->persona->nombres = $_POST['nombres'];
                 $this->persona->apellidos = $_POST['apellidos'];
                 $this->persona->fechanacimiento = $_POST['fechanacimiento'];
@@ -64,20 +64,20 @@ class PersonaController {
                     require_once '../app/views/persona/create.php'; // Puedes pasar el error a la vista
                     exit;
                 }
-            } else {
-        $sexos = $this->sexo->read();
-        $estadosciviles = $this->estadocivil->read();
+         //   } else {
+       // $sexos = $this->sexo->read();
+      //  $estadosciviles = $this->estadocivil->read();
 
-        die(" 3");
+       // die(" 3");
 
-                $error = "Faltan datos en el formulario.";
-                require_once '../app/views/persona/create.php'; // Puedes pasar el error a la vista
-                exit;
-            }
-        } else {
-            header('Location: index.php'); // Redirigir si no es POST
-            exit;
-        }
+         //       $error = "Faltan datos en el formulario.";
+           //     require_once '../app/views/persona/create.php'; // Puedes pasar el error a la vista
+           //     exit;
+           // }
+       // } else {
+         //   header('Location: index.php'); // Redirigir si no es POST
+          //  exit;
+       // }
     }
 
     // Mostrar el formulario de edición de persona
