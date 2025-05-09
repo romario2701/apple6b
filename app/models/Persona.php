@@ -33,9 +33,12 @@ class Persona {
             $stmt->bindParam(":idestadocivil", $this->idestadocivil, PDO::PARAM_INT);
 
             return $stmt->execute();
-
+            echo "grabo";
+            die();
         } catch (PDOException $e) {
+            echo "no grabo";
             error_log("Error en create() para persona: " . $e->getMessage());
+            die();
             return false;
         }
     }
