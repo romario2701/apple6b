@@ -54,14 +54,11 @@ class PersonaController {
                 $this->persona->idestadocivil = $_POST['idestadocivil'];
 
                 if ($this->persona->create()) {
-                    header('Location: index?msg=created');
-                    exit;
+                    echo "personas creada con exito";
+                //    header('Location: index?msg=created');
+          //          exit;
                 } else {
-        $sexos = $this->sexo->read();
-            
-       $estadosciviles = $this->estadocivil->read();
 
-        die(" 2");
 
                     $error = "Error al crear la persona.";
                     require_once '../app/views/persona/create.php'; // Puedes pasar el error a la vista
@@ -180,7 +177,7 @@ if (isset($_GET['action'])) {
         $id = null;
     }
 
-    switch ($action) {
+    switch ($_GET['action']) {
         case 'index':
             $controller->index();
             break;
