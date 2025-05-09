@@ -66,7 +66,7 @@
 
     <div class="form-container">
         <h2>Crear Nueva Persona</h2>
-        <form action="../../controllers/PersonaController.php?action=create" method="POST">
+        <form action="../../app/controllers/PersonaController.php?action=create" method="POST">
             <div class="form-group">
                 <label for="nombres">Nombres:</label>
                 <input type="text" name="nombres" id="nombres" required>
