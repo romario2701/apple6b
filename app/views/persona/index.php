@@ -9,7 +9,7 @@
 <body>
 
 <div class="container">
-    <h1>Listar Personas</h1>
+    <h1>Lista de Personas</h1>
     <a href="/apple6b/public/persona/create"><button>Agregar</button></a>
 
     <table>

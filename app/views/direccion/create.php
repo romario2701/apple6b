@@ -1,12 +1,5 @@
 <form action="../../controllers/DireccionController.php?action=create" method="POST">
-    <label for="idpersona">Persona:</label>
-    <select name="idpersona" id="idpersona" required>
-        <?php foreach ($personas as $persona): ?>
-            <option value="<?= $persona['idpersona'] ?>">
-                <?= htmlspecialchars($persona['nombres'] . ' ' . $persona['apellidos']) ?>
-            </option>
-        <?php endforeach; ?>
-    </select>
+    
 
 <div class="form-group">
                 <label for="idpersona">Persona:</label>
