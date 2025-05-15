@@ -222,6 +222,10 @@ if (isset($_GET['action'])) {
         case 'delete':
             $controller->delete();
             break;
+        case 'api':
+
+        $controller->api();
+        break;
         default:
             echo "Acción no válida.";
             break;
