@@ -10,7 +10,7 @@
 
 <div class="container">
     <h1>Listar  direcciones</h1>
-    <a href="/apple6b/app/views/sexo/create.php"><button>Agregar</button></a>
+    <a href="/apple6b/app/views/direccion/create.php"><button>Agregar</button></a>
 
     <table>
         <thead>
