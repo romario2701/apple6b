@@ -104,6 +104,13 @@ class Persona {
         }
     }
 
+
+    public function getAll() {
+        // Conexión a la base de datos
+        $query = $this->conn->query("SELECT idpersona, nombres, apellidos FROM persona");
+        return $query->fetchAll(PDO::FETCH_ASSOC);
+    }
+
     // Eliminar una persona
     public function delete() {
         try {
