@@ -103,6 +103,24 @@ if (empty($route) || $route === '/') {
                         $controller->update();
                     }
                     break;
+        case 'estadocivil/eliminar':
+            if (isset($_GET['idestadocivil'])) {
+                $controller = new EstadocivilController();
+                $controller->eliminar($_GET['idestadocivil']);
+            } else {
+                echo "Error: Falta el ID para editar.";
+            }
+            break;
+        case 'estadocivil/delete':
+            if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+                $controller = new EstadocivilController();
+                $controller->delete();
+            }
+            break;
+ 
+
+
+
         default:
             echo "Error 404: Página no encontrada.";
             break;
