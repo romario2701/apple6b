@@ -1,5 +1,3 @@
-PHP
-
 <?php
 // Modelo EstadoCivil
 class EstadoCivil {

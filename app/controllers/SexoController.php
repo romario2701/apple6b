@@ -117,7 +117,6 @@ public function update() {
             $this->sexo->idsexo = $_POST['idsexo'];
         if ($this->sexo->delete()) {
                 echo "Sexo borrado exitosamente";
-		die();
             header('Location: index.php?msg=deleted');
             exit;
         } else {
