@@ -1,4 +1,4 @@
-<form action="../../controllers/TelefonoController.php?action=create" method="POST">                                                                              
+<form action="../../app/controllers/TelefonoController.php?action=create" method="POST">                                                                              
     <label for="idpersona">Persona:</label>
     <select name="idpersona" id="idpersona" required>
         <option value="">Seleccione una persona</option>
