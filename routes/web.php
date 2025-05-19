@@ -36,7 +36,22 @@ if (empty($route) || $route === '/') {
             $controller = new PersonaController();
             $controller->createForm();
             break;
-
+        case 'persona/edit':
+                if (isset($_GET['idpersona'])) {
+                    
+                    $controller = new PersonaController();
+                    $controller->edit($_GET['idpersona']);
+                } else {
+                    echo "Error: Falta el ID para editar.";
+                }
+                break;
+                case 'persona/update':
+                    if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+                        $controller = new PersonaController();
+                        $controller->update();
+                    }
+                    break;
+ 
 
 
 
