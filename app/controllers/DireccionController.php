@@ -149,4 +149,4 @@ if (isset($_GET['action'])) {
 } else {
  //  echo "No se especificó ninguna acción.";
 }
-?
+?>
