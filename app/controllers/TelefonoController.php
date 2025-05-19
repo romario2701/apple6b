@@ -7,6 +7,7 @@ error_reporting(E_ALL);
 require_once $_SERVER['DOCUMENT_ROOT'] . '/apple6b/config/database.php';
 require_once $_SERVER['DOCUMENT_ROOT'] . '/apple6b/app/models/Telefono.php';
 
+require_once $_SERVER['DOCUMENT_ROOT'] . '/apple6b/app/models/Persona.php';
 class TelefonoController {
     private $telefono;
     private $db;
@@ -22,10 +23,24 @@ class TelefonoController {
         require_once '../app/views/telefono/index.php';
     }
 
+
+    public function createForm() {
+
+
+        $personas = $this->persona->read();
+            
+        require_once '../app/views/telefono/create.php';
+    }
+
+
+
+
+
     public function create() {
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             echo "Formulario recibido";
             if (isset($_POST['numero'])) {
+                $this->telefono->idpersona = $_POST['idpersona'];
                 $this->telefono->numero = $_POST['numero'];
                 if ($this->telefono->create()) {
                     echo "Teléfono creado exitosamente";
@@ -112,6 +127,10 @@ if (isset($_GET['action'])) {
 
     echo "hola";
     switch ($_GET['action']) {
+        case 'createForm':
+            $controller->createForm();
+            break;
+ 
         case 'create':
             $controller->create();
             break;

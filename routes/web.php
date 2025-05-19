@@ -83,6 +83,12 @@ if (empty($route) || $route === '/') {
             $controller = new TelefonoController();
             $controller->index();
             break;
+        case 'telefono/create':
+            $controller = new TelefonoController();
+            $controller->createForm();
+            break;
+
+
         case 'estadocivil':
         case 'estadocivil/index':
             $controller = new EstadoCivilController();
