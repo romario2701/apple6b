@@ -87,7 +87,22 @@ if (empty($route) || $route === '/') {
             $controller = new TelefonoController();
             $controller->createForm();
             break;
-
+        case 'telefono/edit':
+                if (isset($_GET['idtelefono'])) {
+                    
+                    $controller = new TelefonoController();
+                    $controller->edit($_GET['idtelefono']);
+                } else {
+                    echo "Error: Falta el ID para editar.";
+                }
+                break;
+                case 'telefono/update':
+                    if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+                        $controller = new TelefonoController();
+                        $controller->update();
+                    }
+                    break;
+ 
 
         case 'estadocivil':
         case 'estadocivil/index':

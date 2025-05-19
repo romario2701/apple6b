@@ -56,9 +56,10 @@ class TelefonoController {
         die();
     }
 
-    public function edit($id) {
-        $this->telefono->id = $id;
+    public function edit($idtelefono) {
+        $this->telefono->idtelefono = $idtelefono;
         $telefono = $this->telefono->readOne();
+        $personas = $this->persona->read();
 
         if (!$telefono) {
             die("Error: No se encontró el registro.");
@@ -68,7 +69,7 @@ class TelefonoController {
     }
 
     public function eliminar($id) {
-        $this->telefono->id = $id;
+        $this->telefono->idtelefono = $idtelefono;
         $telefono = $this->telefono->readOne();
 
         if (!$telefono) {
