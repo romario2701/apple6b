@@ -18,6 +18,9 @@ class PersonaController {
         $this->persona = new Persona($this->db);
         $this->sexo = new Sexo($this->db);
         $this->estadocivil = new Estadocivil($this->db);
+
+        $this->telefono = new Telefono($this->db);
+        $this->direccion = new Direccion($this->db);
     }
 
     // Mostrar todas las personas
@@ -25,6 +28,7 @@ class PersonaController {
         $personas = $this->persona->read();
         $sexos = $this->sexo->read();
         $estadosciviles = $this->estadocivil->read();
+
         require_once '../app/views/persona/index.php';
     }
 
