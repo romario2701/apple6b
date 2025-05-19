@@ -15,6 +15,7 @@ class TelefonoController {
     public function __construct() {
         $this->db = (new Database())->getConnection();
         $this->telefono = new Telefono($this->db);
+        $this->persona = new Persona($this->db);
     }
 
     // Mostrar todos los teléfonos
