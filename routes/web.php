@@ -51,6 +51,15 @@ if (empty($route) || $route === '/') {
                         $controller->update();
                     }
                     break;
+         case 'persona/view':
+                if (isset($_GET['idpersona'])) {
+                    
+                    $controller = new PersonaController();
+                    $controller->registro($_GET['idpersona']);
+                } else {
+                    echo "Error: Falta el ID para editar.";
+                }
+                break;
  
 
 

@@ -69,6 +69,10 @@ class Telefono {
         }
     }
 
+
+   
+
+
     // Leer un solo teléfono por ID
     public function readOne() {
         try {

@@ -7,7 +7,8 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/apple6b/config/database.php';
 require_once $_SERVER['DOCUMENT_ROOT'] . '/apple6b/app/models/Persona.php';
 require_once $_SERVER['DOCUMENT_ROOT'] . '/apple6b/app/models/Sexo.php';
 require_once $_SERVER['DOCUMENT_ROOT'] . '/apple6b/app/models/Estadocivil.php';
-
+require_once $_SERVER['DOCUMENT_ROOT'] . '/apple6b/app/models/Direccion.php';
+require_once $_SERVER['DOCUMENT_ROOT'] . '/apple6b/app/models/Telefono.php';
 class PersonaController {
     private $persona;
     private $db;
@@ -92,6 +93,25 @@ class PersonaController {
 
         require_once '../app/views/persona/edit.php';
     }
+
+    public function registro($idpersona) {
+        $this->persona->idpersona = $idpersona;
+        $sexos = $this->sexo->read();
+        $estadosciviles = $this->estadocivil->read();
+
+        $telefonos = $this->telefono->readByPersona($idpersona);
+        $direcciones = $this->direccion->readByPersona($idpersona);
+        $persona = $this->persona->readOne();
+
+        if (!$persona) {
+            die("Error: No se encontró la persona.");
+        }
+
+        require_once '../app/views/persona/edit.php';
+    }
+
+ 
+
 
     // Procesar la actualización de una persona
     public function update() {

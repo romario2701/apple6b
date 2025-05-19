@@ -33,7 +33,7 @@
                         <td><?php echo htmlspecialchars($persona['apellidos']); ?></td>
                         <td><?php echo htmlspecialchars($persona['fechanacimiento']); ?></td>
                         <td><?php echo htmlspecialchars($persona['elsexo']); ?></td> <td><?php echo htmlspecialchars($persona['elestadocivil']); ?></td> <td>
-                            <a href="/apple6b/public/persona/viewForm?idpersona=<?php echo htmlspecialchars($persona['idpersona']); ?>">
+                            <a href="/apple6b/public/persona/view?idpersona=<?php echo htmlspecialchars($persona['idpersona']); ?>">
                                 <button>View</button>
                             </a>
                             <a href="/apple6b/public/persona/edit?idpersona=<?php echo htmlspecialchars($persona['idpersona']); ?>">
