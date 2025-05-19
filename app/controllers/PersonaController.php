@@ -32,7 +32,6 @@ class PersonaController {
 
 
         $sexos = $this->sexo->read();
-            
         $estadosciviles = $this->estadocivil->read();
         require_once '../app/views/persona/create.php';
     }
@@ -81,8 +80,10 @@ class PersonaController {
     }
 
     // Mostrar el formulario de edición de persona
-    public function editForm($idpersona) {
+    public function edit($idpersona) {
         $this->persona->idpersona = $idpersona;
+        $sexos = $this->sexo->read();
+        $estadosciviles = $this->estadocivil->read();
         $persona = $this->persona->readOne();
 
         if (!$persona) {
