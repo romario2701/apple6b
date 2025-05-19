@@ -36,7 +36,7 @@
                             <a href="/apple6b/public/persona/viewForm?id=<?php echo htmlspecialchars($persona['idpersona']); ?>">
                                 <button>View</button>
                             </a>
-                            <a href="/apple6b/public/persona/editForm?id=<?php echo htmlspecialchars($persona['idpersona']); ?>">
+                            <a href="/apple6b/public/persona/edit?id=<?php echo htmlspecialchars($persona['idpersona']); ?>">
                                 <button>Editar</button>
                             </a>
                             <a href="/apple6b/public/persona/deleteForm?id=<?php echo htmlspecialchars($persona['idpersona']); ?>"
