@@ -93,6 +93,33 @@ if (empty($route) || $route === '/') {
             $controller = new DireccionController();
             $controller->index();
             break;
+        case 'direccion/create':
+            $controller = new DireccionController();
+            $controller->createForm();
+            break;
+        case 'direccion/edit':
+                if (isset($_GET['iddireccion'])) {
+                    
+                    $controller = new DireccionController();
+                    $controller->edit($_GET['iddireccion']);
+                } else {
+                    echo "Error: Falta el ID para editar.";
+                }
+                break;
+                case 'direccion/update':
+                    if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+                        $controller = new DireccionController();
+                        $controller->update();
+                    }
+                    break;
+ 
+
+
+
+
+
+
+
         case 'telefono':
         case 'telefono/index':
             $controller = new TelefonoController();
