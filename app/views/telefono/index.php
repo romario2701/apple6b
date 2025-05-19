@@ -10,7 +10,7 @@
 
 <div class="container">
     <h1>Listar  Telefonos</h1>
-    <a href="/apple6b/app/views/telefono/create.php"><button>Agregar</button></a>
+    <a href="/apple6b/public/telefono/create"><button>Agregar</button></a>
 
     <table>
         <thead>
