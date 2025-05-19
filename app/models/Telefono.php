@@ -34,6 +34,26 @@ class Telefono {
         }
     }
 
+
+    // Leer todos los teléfonos
+    public function read1() {
+        try {
+            $query = "SELECT * FROM " . "telefono1";
+            $stmt = $this->conn->prepare($query);
+            $stmt->execute();
+
+            return $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+        } catch (PDOException $e) {
+            error_log("Error en read() para telefono: " . $e->getMessage());
+            return [];
+        }
+    }
+
+
+
+
+
     // Leer todos los teléfonos
     public function read() {
         try {

@@ -18,7 +18,7 @@ class TelefonoController {
 
     // Mostrar todos los teléfonos
     public function index() {
-        $telefonos = $this->telefono->read();
+        $telefonos = $this->telefono->read1();
         require_once '../app/views/telefono/index.php';
     }
 
