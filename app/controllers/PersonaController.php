@@ -111,7 +111,7 @@ class PersonaController {
             die("Error: No se encontró la persona.");
         }
 
-        require_once '../app/views/persona/edit.php';
+        require_once '../app/views/persona/registro.php';
     }
 
  
