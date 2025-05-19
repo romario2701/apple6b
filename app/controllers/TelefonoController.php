@@ -28,7 +28,7 @@ class TelefonoController {
 
 
         $personas = $this->persona->read();
-            
+           print_r($personas); 
         require_once '../app/views/telefono/create.php';
     }
 
