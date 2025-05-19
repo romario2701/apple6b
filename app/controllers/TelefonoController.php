@@ -83,8 +83,9 @@ class TelefonoController {
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             echo "Formulario recibido";
             if (isset($_POST['numero'])) {
+                $this->telefono->idpersona = $_POST['idpersona'];
                 $this->telefono->numero = $_POST['numero'];
-                $this->telefono->id = $_POST['id'];
+                $this->telefono->idtelefono = $_POST['idtelefono'];
                 if ($this->telefono->update()) {
                     echo "Teléfono actualizado exitosamente";
                 } else {
