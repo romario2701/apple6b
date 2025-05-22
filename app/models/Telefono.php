@@ -50,7 +50,11 @@ class Telefono {
         }
     }
 
-
+public function getAll() {
+        // Conexión a la base de datos
+        $query = $this->conn->query("SELECT *  FROM telefono");
+        return $query->fetchAll(PDO::FETCH_ASSOC);
+    }
 
 
 
