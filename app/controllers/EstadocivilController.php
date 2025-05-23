@@ -43,6 +43,8 @@ class estadocivilController {
         die();  // Detener la ejecución para ver los mensajes
     }
 
+    
+
     public function edit($idestadocivil) {
         // Pasar el ID al modelo antes de llamar a readOne()
         $this->estadocivil->idestadocivil = $idestadocivil;
@@ -112,6 +114,19 @@ class estadocivilController {
     }
 }
 
+public function api() {
+
+        while (ob_get_level()) {
+            ob_end_clean();
+        }
+
+        $sexos = $this->estadocivil->getAll();
+        header('Content-Type: application/json');
+        echo json_encode($estadosciviles);
+        exit;
+    }
+
+
 /// Manejo de la acción en la URL
 if (isset($_GET['action'])) {
     $controller = new estadocivilController();
@@ -136,6 +151,10 @@ if (isset($_GET['action'])) {
             break;
         case 'delete':
             $controller->delete();
+            break;
+        case 'api':
+
+            $controller->api();
             break;
         default:
             echo "Acción no válida.";
