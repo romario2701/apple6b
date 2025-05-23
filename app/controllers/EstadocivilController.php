@@ -112,9 +112,8 @@ class estadocivilController {
         }
         die();  // Detener la ejecución para ver los mensajes
     }
-}
 
-public function api() {
+    public function api() {
 
         while (ob_get_level()) {
             ob_end_clean();
@@ -125,6 +124,9 @@ public function api() {
         echo json_encode($estadosciviles);
         exit;
     }
+}
+
+
 
 
 /// Manejo de la acción en la URL
@@ -153,7 +155,6 @@ if (isset($_GET['action'])) {
             $controller->delete();
             break;
         case 'api':
-
             $controller->api();
             break;
         default:

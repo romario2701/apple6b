@@ -14,6 +14,7 @@ class Direccion {
         $this->conn = $db;
     }
 
+
     // Crear un nuevo teléfono
     public function create() {
         try {
@@ -50,7 +51,11 @@ class Direccion {
         }
     }
 
-
+    public function getAll() {
+            $db = Database::connect();
+            $query = $db->query("SELECT iddireccion, nombre FROM direccion");
+            return $query->fetchAll(PDO::FETCH_ASSOC);
+        }
 
 
 

@@ -14,7 +14,7 @@ class EstadoCivil {
 
     public function getAll() {
         $db = Database::connect();
-        $query = $db->query("SELECT idestadocivil, nombre FROM estadocivil");
+        $query = $db->query("SELECT * FROM estadocivil");
         return $query->fetchAll(PDO::FETCH_ASSOC);
     }
 
