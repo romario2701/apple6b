@@ -119,7 +119,7 @@ class estadocivilController {
             ob_end_clean();
         }
 
-        $sexos = $this->estadocivil->getAll();
+        $estadosciviles = $this->estadocivil->getAll();
         header('Content-Type: application/json');
         echo json_encode($estadosciviles);
         exit;

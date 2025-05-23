@@ -128,7 +128,7 @@ class DireccionController {
             ob_end_clean();
         }
 
-        $sexos = $this->direccion->getAll();
+        $direcciones = $this->direccion->getAll();
         header('Content-Type: application/json');
         echo json_encode($direcciones);
         exit;
